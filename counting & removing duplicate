@@ -1,0 +1,8 @@
+let
+    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WSk4sUorVwUYXl+SkojNT8nNyUBk5qen5OBgl+ZVKsbEA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Type = _t]),
+    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Type", type text}}),
+    #"Duplicated Column" = Table.DuplicateColumn(#"Changed Type", "Type", "Type - Copy"),
+    #"Pivoted Column" = Table.Pivot(#"Duplicated Column", List.Distinct(#"Duplicated Column"[#"Type - Copy"]), "Type - Copy", "Type", List.Count),
+    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Pivoted Column", {}, "Attribute", "Value")
+in
+    #"Unpivoted Columns"
