@@ -1,0 +1,1 @@
+Review Needed = IF(COUNTX(FILTER(Cynoteck,CONTAINSSTRING(Cynoteck[Performance],"Review")),Cynoteck[Performance])>0,"Review Needed","Review Not")
