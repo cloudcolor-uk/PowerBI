@@ -1,1 +1,3 @@
-Review Needed = IF(COUNTX(FILTER(Cynoteck,CONTAINSSTRING(Cynoteck[Performance],"Review")),Cynoteck[Performance])>0,"Review Needed","Review Not")
+Review Needed = IF(COUNTX(FILTER(Cynoteck,CONTAINSSTRING(Cynoteck[Performance],"Review")),Cynoteck[Performance])>0,"Review Needed","Review Not") 
+OR
+Review Needed 2 = if(CALCULATE(Count(Cynoteck[Performance]),CONTAINSSTRING(Cynoteck[Performance], "Review"))>0, "Review Needed", "Review Not")
