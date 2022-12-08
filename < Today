@@ -1,0 +1,7 @@
+Only up to today's date = CALCULATE(SUM('Table'[SALES]),'Table'[MONTH]<=TODAY())
+
+Only up to a month before = 
+    var current_month= 
+            MONTH(TODAY()) return 
+                CALCULATE(SUM('Table'[SALES]),
+                   MONTH('Table'[MONTH])<=current_month -1)
