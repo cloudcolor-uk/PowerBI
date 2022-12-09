@@ -1,0 +1,1 @@
+New Description = IF('Table (2)'[Code] = "AAA000", "the description I want to update with", "Other the Description")
