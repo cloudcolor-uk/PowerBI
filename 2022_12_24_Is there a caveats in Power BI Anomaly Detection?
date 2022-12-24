@@ -1,7 +1,7 @@
-Is there a caveats in Power BI Anomaly Detection?
+Are there caveats in Power BI Anomaly Detection?
 
 The Power BI anomaly detection algorithm which runs on time series data marks some of the data points as anomalies, whereas a close examination of data will reveal 
-that they are factual. In my opinon, anomalies cannot be detected with single data points. To detect anomalties few additional conditions or prerequisites are required. 
-For e.g. in this billing system calculation we need to see whether the value are within the range of disease or any external factors i.e. disease outbreak etc. 
+that they are factual. In my opinion, anomalies cannot be detected with single data points. To detect anomalies few additional conditions or prerequisites are required. 
+For e.g. in this hospital billing system calculation, we need to see whether the value is influenced by certain disease or factors like disease outbreak etc. 
 
-What is your opinion or any pointer in dealing anomalites in your organisation?
+What is your opinion or any pointer in dealing with anomalies in your organisation?
